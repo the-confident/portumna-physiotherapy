@@ -113,6 +113,9 @@
   --space-3xl: 3rem;
   --space-4xl: 5rem;
   --space-5xl: 6rem;
+
+  /* Widths */
+  --width-content: 1100px;
 }
 
 html {
@@ -174,7 +177,7 @@ img {
 }
 
 .nav-inner {
-  max-width: 1100px;
+  max-width: var(--width-content);
   margin: 0 auto;
   padding: var(--space-lg);
   display: flex;
@@ -260,7 +263,7 @@ img {
   display: flex;
   align-items: center;
   background-color: var(--fg);
-  background-image: url("assets/images/acupuncture.jpg");
+  background-image: url("assets/images/brian-murphy-inspecting-knee.jpg");
   background-size: cover;
   background-position: center 30%;
 }
@@ -278,7 +281,7 @@ img {
 
 .hero__content {
   position: relative;
-  max-width: 1100px;
+  max-width: var(--width-content);
   margin: 0 auto;
   padding: var(--space-5xl) var(--space-lg);
   width: 100%;
@@ -367,7 +370,7 @@ img {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: var(--width-content);
   margin: 0 auto;
 }
 
@@ -500,6 +503,14 @@ img {
   color: var(--muted-fg);
 }
 
+.services-image {
+  margin-block-start: var(--space-3xl);
+}
+
+.services-image img {
+  width: 100%;
+}
+
 /* ── CONDITIONS ── */
 .conditions-grid {
   display: grid;
@@ -512,6 +523,10 @@ img {
   font-size: var(--fs-md);
   line-height: 1.85;
   color: #4a5568;
+}
+
+.conditions-image {
+  margin-block-start: var(--space-xl);
 }
 
 .conditions-list {
@@ -647,36 +662,20 @@ img {
   margin-top: var(--space-3xs);
 }
 
-.insurance-note {
-  margin-top: var(--space-xl);
-  padding: var(--space-md);
-  background: var(--muted);
-  border-radius: 2px;
-  border-left: 3px solid var(--primary);
-  font-size: var(--fs-sm);
-  line-height: 1.7;
-  color: #4a5568;
-}
-
-
-.insurance-note strong {
-  color: var(--fg);
-}
-
 /* ── FOOTER ── */
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: var(--space-2xl) var(--space-lg);
+  padding: var(--space-3xl) var(--space-lg);
 }
 
 .site-footer__inner {
-  max-width: 1100px;
+  max-width: var(--width-content);
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
+  gap: var(--space-xl);
 }
 
 .site-footer__brand {
@@ -700,7 +699,6 @@ img {
   display: block;
   max-width: 200px;
   height: auto;
-  margin-top: var(--space-xl);
 }
 
 /* ── RESPONSIVE ── */

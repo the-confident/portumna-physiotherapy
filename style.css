@@ -81,10 +81,10 @@
 :root {
   --bg: #ffffff;
   --fg: #1a2535;
-  --primary: #1a819b;
+  --primary: #187991;
   --primary-light: #66b8d1;
-  --muted: #f4f1ed;
-  --muted-fg: #6b7280;
+  --muted: #f6f3ef;
+  --muted-fg: #636871;
   --border: #e0dbd3;
   --accent: #c8a96e;
   --serif: "Lora", Georgia, serif;
@@ -660,6 +660,11 @@ img {
   font-size: var(--fs-sm);
   color: var(--muted-fg);
   margin-top: var(--space-3xs);
+}
+
+.contact-value a {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 /* ── FOOTER ── */
